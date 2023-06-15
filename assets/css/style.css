@@ -272,41 +272,61 @@ body {
 }
 
 /* ABOUT */
-.about {
+.card {
 	margin-top: 80px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.about__item {
+.card__item {
 	width: 380px;
+}
+
+.card__info {
+	margin-top: 15px;
+
+	text-align: center;
+}
+.card__name {
+	text-transform: uppercase;
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card__prof {
+	color: #999;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.card__inner {
 	background-color: #95e1d3;
 	position: relative;
 }
 
-.about__item:hover .about__img {
+.card__inner:hover .card__img {
 	transform: translate3d(-8px, -8px, 0);
 }
 
-.about__item:hover .about__img img {
+.card__inner:hover .card__img img {
 	opacity: 0.1;
 }
 
-.about__item:hover .about__text {
+.card__inner:hover .card__text {
 	opacity: 1;
 }
 
-.about__img {
+.card__img {
 	background: linear-gradient(to bottom, #f38181, #fce38a);
 	transition: transform 0.2s linear;
 }
 
-.about__img img {
+.card__img img {
 	transition: opacity 0.1s linear;
 	display: block;
 }
 
-.about__text {
+.card__text {
 	width: 100%;
 	font-size: 18px;
 	color: #fff;
@@ -562,4 +582,44 @@ body {
 .reviews__button--next {
 	right: 0;
 	transform: rotate(135deg);
+}
+
+/* Who we are */
+
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social__item {
+	width: 55px;
+	height: 55px;
+	font-size: 25px;
+	text-decoration: none;
+	color: #f38181;
+	background-color: #fce38a;
+	border-right: 1px solid #f38181;
+	padding: 10px;
+
+	transition: font-size 0.1s linear;
+	transition: background-color 0.3s linear;
+}
+.social__item:last-child {
+	border-right: 0;
+}
+.social__item:hover {
+	font-size: 27px;
+	color: #fff;
+	background-color: #f38181;
+}
+.social__item:active {
+	font-size: 25px;
+	background-color: #eb4848;
+}
+
+/* LOGOS SECTION */
+
+.logos {
+	display: flex;
+	justify-content: space-between;
 }
