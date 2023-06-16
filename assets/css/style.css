@@ -848,7 +848,7 @@ body {
 .section--map {
 	background: url(/assets/img/map-bg.jpg) center no-repeat;
 	margin-top: 100px;
-	padding: 40px 0;
+	padding: 80px 0;
 }
 
 .map {
@@ -860,6 +860,7 @@ body {
 	color: #f38181;
 	font-weight: 700;
 	line-height: 1.1;
+	position: relative;
 }
 
 .map__title:after {
@@ -874,7 +875,11 @@ body {
 }
 
 .fa-location-dot {
-	transition: font-size 0.1s linear;
+	position: absolute;
+	left: 49%;
+	top: -35px;
+	z-index: 1;
+	transition: font-size 0.2s linear;
 	transition: text-shadow 0.2s linear;
 }
 
@@ -892,7 +897,7 @@ body {
 	text-shadow: 1px 1px 10px #f38181;
 }
 .fa-location-dot:hover {
-	font-size: 32px;
+	font-size: 30px;
 	text-shadow: 1px 1px 5px #eb4848;
 }
 
@@ -1045,12 +1050,7 @@ footer {
 	background-color: #002e25;
 }
 
-.footer__col--first {
-}
-
 /* BLOGS */
-.blogs {
-}
 
 .blogs__item {
 	display: flex;
