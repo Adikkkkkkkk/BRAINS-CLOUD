@@ -389,14 +389,19 @@ body {
 /* SERVICES */
 .services {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .services__item {
-	flex: 1 1 0;
+	width: 33.3333%;
 
-	padding-right: 35px;
-	padding-left: 85px;
+	padding: 0 35px 40px 85px;
 	position: relative;
+	margin-bottom: 40px;
+}
+
+.services__item--border {
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -429,6 +434,8 @@ body {
 
 .devices__item {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .devices__item--iphone {
@@ -441,10 +448,18 @@ body {
 /* We Do */
 .wedo {
 	display: flex;
+	margin: 0 -15px;
+	flex-wrap: wrap;
 }
 
 .wedo__item {
 	width: 50%;
+	padding: 0 15px;
+}
+
+.wedo__image {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Accordion */
@@ -1164,10 +1179,25 @@ footer {
 	.stat__item {
 		flex: none;
 		width: 33.3333%;
+		padding-top: 30px;
+		padding-bottom: 30px;
 
 		border: 0;
 	}
+	.stat__item:last-child {
+		border-right: 0;
+	}
+
+	/* SERVICES */
+	.services__item {
+		width: 50%;
+		padding-bottom: 0;
+	}
+	.services__item--border {
+		border-bottom: 0;
+	}
 }
+
 @media (max-width: 770px) {
 	.nav {
 		display: none;
@@ -1191,6 +1221,10 @@ footer {
 		padding: 40px 0;
 	}
 
+	.section--devices {
+		padding-bottom: 0;
+	}
+
 	/* SLIDER */
 	.slider__text {
 		display: none;
@@ -1199,7 +1233,32 @@ footer {
 	.slider__item.active:before {
 		width: 50%;
 	}
+
+	/* SERVICES */
+	.services {
+		justify-content: center;
+	}
+
+	.services__item {
+		width: 100%;
+		max-width: 400px;
+		padding-left: 75px;
+		padding-right: 0;
+	}
+	.services__icon {
+		left: 0;
+	}
+
+	/* WEDO */
+	.wedo__image {
+		display: none;
+	}
+
+	.wedo__item {
+		width: 100%;
+	}
 }
+
 @media (max-width: 575px) {
 	/* INTRO */
 	.intro__suptitle {
@@ -1221,5 +1280,28 @@ footer {
 	}
 	.section__title:after {
 		margin: 20px auto;
+	}
+
+	/* STATISTIC */
+	.stat__item {
+		width: 100%;
+		border-bottom: 1px solid #fff;
+	}
+	.stat__item:last-child {
+		border-bottom: 0;
+	}
+
+	.stat__count {
+		font-size: 52px;
+	}
+
+	/* DEVICES */
+	.devices {
+		max-width: 320px;
+	}
+	.devices__item--iphone {
+		width: 180px;
+		bottom: -50px;
+		right: -80px;
 	}
 }
