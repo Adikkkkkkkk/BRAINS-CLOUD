@@ -160,6 +160,10 @@ body {
 	font-size: 14px;
 }
 
+.nav.active {
+	display: block;
+}
+
 .nav__link {
 	display: inline-block;
 	vertical-align: top;
@@ -171,6 +175,7 @@ body {
 
 	transition: color 0.1s linear;
 }
+
 .nav__link:hover {
 	color: #fce38a;
 }
@@ -1521,6 +1526,11 @@ footer {
 	.footer__col--third {
 		width: 100%;
 	}
+
+	/* COPYRIGHT */
+	.copyright {
+		font-size: 12px;
+	}
 }
 
 @media (max-width: 575px) {
@@ -1641,6 +1651,11 @@ footer {
 	}
 
 	.blogs__title {
+		font-size: 10px;
+	}
+
+	/* COPYRIGHT */
+	.copyright {
 		font-size: 10px;
 	}
 }

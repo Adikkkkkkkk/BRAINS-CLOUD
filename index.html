@@ -16,13 +16,13 @@
 	<header class='header' id='header'>
 		<div class="container">
 			<div class="header__inner">
-				<div class="header__logo">MoGo</div>
-				<nav class='nav'>
-					<a class='nav__link' href="#end">About</a>
-					<a class='nav__link' href="#">Service</a>
-					<a class='nav__link' href="#">Blog</a>
-					<a class='nav__link' href="">Work</a>
-					<a class='nav__link' href="">Contact</a>
+				<div class="header__logo" data-scroll="#intro">MoGo</div>
+				<nav class='nav' id='nav'>
+					<a class='nav__link' href="#end" data-scroll="#about">About</a>
+					<a class='nav__link' href="#" data-scroll="#services">Service</a>
+					<a class='nav__link' href="#" data-scroll="#blog">Blog</a>
+					<a class='nav__link' href="" data-scroll="#work">Work</a>
+					<a class='nav__link' href="#" data-scroll="#footer">Contact</a>
 					<a class='nav__link' href="">
 						<i class="fa-solid fa-cart-shopping"></i>
 					</a>
@@ -31,7 +31,7 @@
 					</a>
 				</nav>
 
-				<button class="nav-toggle active" type='button'>
+				<button class="nav-toggle" id='nav_toggle' type='button'>
 					<span class='nav-toggle__item'>MENU</span>
 				</button>
 
@@ -70,7 +70,7 @@
 		</div> <!-- /.intro -->
 
 		<!-- SECTION -->
-		<section class="section">
+		<section class="section" id='about'>
 			<div class="container">
 				<div class="section__header">
 					<h3 class='section__suptitle'>What we do</h3>
@@ -142,7 +142,7 @@
 		</div>
 
 		<!-- Services -->
-		<section class="section">
+		<section class="section" id='services'>
 			<div class="container">
 				<div class="section__header">
 					<h3 class='section__suptitle'>We work with</h3>
@@ -459,7 +459,7 @@
 	</div>
 
 	<!-- WORKS -->
-	<section class="section">
+	<section class="section" id='work'>
 		<div class="container">
 			<div class="section__header">
 				<h3 class='section__suptitle'>What we do</h3>
@@ -618,7 +618,7 @@
 	</section>
 
 	<!-- BLOG -->
-	<div class="section section">
+	<div class="section section" id='blog'>
 		<div class="container">
 
 			<div class="section__header">
@@ -721,7 +721,7 @@
 	</section>
 
 	<!-- FOOTER -->
-	<footer class="footer" id='end'>
+	<footer class="footer" id='footer'>
 		<div class="container">
 
 			<div class="footer__inner">
