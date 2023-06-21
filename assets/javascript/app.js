@@ -25,8 +25,8 @@ $(function () {
 		event.preventDefault()
 
 		let $this = $(this),
-			blockID = $(this).data('scroll')
-		blockOffset = $(blockID).offset().top
+			blockID = $(this).data('scroll'),
+			blockOffset = $(blockID).offset().top
 
 		$('#nav a').removeClass('active')
 		$this.addClass('active')
@@ -45,5 +45,23 @@ $(function () {
 
 		$(this).toggleClass('active')
 		$('#nav').toggleClass('active')
+	})
+
+	// Collapse
+	$('[data-collapse]').on('click', function (event) {
+		event.preventDefault()
+
+		let $this = $(this),
+			blockID = $(this).data('collapse')
+
+		$this.toggleClass('active')
+	})
+
+	// Slider
+	$('[data-slider]').slick({
+		infinite: true,
+		fade: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
 	})
 })
